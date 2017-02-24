@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-LINK_LIBS := -L$(ATLAS_LIB_PATH) -latlas -lcblas
+LINK_LIBS := -L$(ATLAS_LIB_PATH) $(OTHER_LIB_PATH_ARGS) $(ATLAS_LIB_ARGS)
 INCLUDES := -I./include
 COMMONFLAGS :=
 CC_ARGS := 

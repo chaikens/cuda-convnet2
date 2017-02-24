@@ -40,6 +40,14 @@ export NUMPY_INCLUDE_PATH=/usr/lib64/python2.7/site-packages/numpy/core/include/
 #export ATLAS_LIB_PATH=/usr/lib/atlas-base
 export ATLAS_LIB_PATH=/usr/lib64/atlas
 
+#CEAS has cblas.so only here..we should ask for sysadm fix install of cblas.
+#/usr/lib64/python2.7/site-packages/scipy/lib/blas/cblas.so
+export OTHER_LIB_PATH_ARGS='-L/usr/lib64 -L/usr/lib64/python2.7/site-packages/scipy/lib/blas'
+
+#export ATLAS_LIB_ARGS='-ltatlas -lcblas'
+export ATLAS_LIB_ARGS='-ltatlas -lsatlas'
+
+
 # You don't have to change these:
 export LD_LIBRARY_PATH=$CUDA_INSTALL_PATH/lib64:$LD_LIBRARY_PATH
 export CUDA_SDK_PATH=$CUDA_INSTALL_PATH/samples
