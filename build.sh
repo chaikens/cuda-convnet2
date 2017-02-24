@@ -40,11 +40,10 @@ export NUMPY_INCLUDE_PATH=/usr/lib64/python2.7/site-packages/numpy/core/include/
 #export ATLAS_LIB_PATH=/usr/lib/atlas-base
 export ATLAS_LIB_PATH=/usr/lib64/atlas
 
-#CEAS has cblas.so only here..we should ask for sysadm fix install of cblas.
-#/usr/lib64/python2.7/site-packages/scipy/lib/blas/cblas.so
-export OTHER_LIB_PATH_ARGS='-L/usr/lib64 -L/usr/lib64/python2.7/site-packages/scipy/lib/blas'
+export OTHER_LIB_PATH_ARGS='-L/usr/lib64'
 
 #export ATLAS_LIB_ARGS='-ltatlas -lcblas'
+#sdc: Apparently, we needn't or shouldn't have -lcblas since its symbols are in atlas
 export ATLAS_LIB_ARGS='-ltatlas -lsatlas'
 
 
