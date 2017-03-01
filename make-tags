@@ -1,0 +1,1 @@
+etags --lang c++ `./find-cpps` --lang python `./find-pys`
